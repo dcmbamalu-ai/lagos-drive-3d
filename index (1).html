@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lagos Drive 3D</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Lagos Drive 3D</h1>
+  <p class="help">Steer with ← → (or A / D). Hold ↑ (or W) to accelerate, ↓ (or S) to brake. Press Enter (or the Fly button) to fly for 15 seconds. Collect power-ups: ⚡ nitro, 🛡 shield, ⭐ double points, ✈ fly charge. Press C (or keys 1–5) to change the camera view. On a phone, use the buttons.</p>
+
+  <div id="stage">
+    <div class="hud hud-left">Score: <span id="score">0</span></div>
+    <div class="hud hud-right">Best: <span id="best">0</span> &nbsp; <span id="kmh">0</span> km/h</div>
+    <div id="roadName"></div>
+    <div id="toast"></div>
+    <div id="powerHud"></div>
+    <div id="overlay">
+      <div class="crash-title">Crash!</div>
+      <div class="crash-score">Score: <span id="finalScore">0</span></div>
+      <div class="crash-hint">Tap here or press Space to retry</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button id="leftBtn">← Left</button>
+    <button id="rightBtn">Right →</button><br>
+    <button id="gasBtn">↑ Hold to accelerate</button><br>
+    <button id="flyBtn">✈ FLY (Enter) - 15s</button>
+    <button id="viewBtn">Camera</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

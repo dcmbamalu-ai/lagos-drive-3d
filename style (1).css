@@ -1,0 +1,175 @@
+/* Lagos Drive 3D - styles */
+
+body {
+  margin: 0;
+  padding: env(safe-area-inset-top, 0px) 10px env(safe-area-inset-bottom, 0px);
+  background: #111827;
+  color: #f9fafb;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 12px 0 4px;
+}
+
+.help {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+/* The game window */
+#stage {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: min(62vh, 520px);
+  margin: 0 auto;
+  border: 3px solid #f59e0b;
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #f0b070;
+}
+
+#stage canvas {
+  display: block;
+}
+
+/* Score, best score, speed and road name shown over the game */
+.hud {
+  position: absolute;
+  top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 2px 4px #000000;
+}
+
+.hud-left {
+  left: 14px;
+}
+
+.hud-right {
+  right: 14px;
+}
+
+#roadName {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 2px 4px #000000;
+}
+
+/* Active power-up timers (bottom) and pop-up messages (middle) */
+#powerHud {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 2px 4px #000000;
+}
+
+#toast {
+  display: none;
+  position: absolute;
+  top: 32%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fde047;
+  text-shadow: 0 2px 6px #000000;
+  pointer-events: none;
+}
+
+/* Crash screen (hidden until the game script shows it) */
+#overlay {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.crash-title {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.crash-score {
+  font-size: 20px;
+  margin: 8px 0;
+}
+
+.crash-hint {
+  font-size: 18px;
+}
+
+/* Buttons under the game */
+.controls {
+  margin: 12px 0;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+#leftBtn,
+#rightBtn {
+  font-size: 20px;
+  padding: 12px 36px;
+  margin: 0 6px;
+  background: #f59e0b;
+  color: #1f2937;
+}
+
+#gasBtn {
+  font-size: 20px;
+  padding: 14px 90px;
+  margin: 10px 6px 0;
+  background: #22c55e;
+  color: #052e16;
+  touch-action: none;
+  user-select: none;
+}
+
+#flyBtn {
+  font-size: 18px;
+  padding: 12px 30px;
+  margin: 10px 6px 0;
+  background: #a855f7;
+  color: #ffffff;
+}
+
+#viewBtn {
+  font-size: 18px;
+  padding: 12px 40px;
+  margin: 10px 6px 0;
+  background: #334155;
+  color: #ffffff;
+}
+
+/* Message shown if the browser cannot run 3D graphics */
+.no-webgl {
+  padding: 30px;
+}
